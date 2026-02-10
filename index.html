@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ 
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Naslov koji se vidi u tabu preglednika -->
+  <title>Azil Šapica | Naslovna</title>
+
+  <!-- Povezujemo vanjski CSS: nalazi se u mapi css -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="js/config.js" defer></script>
+
+  <!-- main.js je zajednički JS za sve stranice (npr. interaktivni sitni elementi) -->
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- HEADER: semantički element za “gornji dio” stranice -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logo/ime projekta (izmišljeno) -->
+      <a class="brand" href="index.html" aria-label="Povratak na naslovnu">
+        🐾 Azil Šapica
+      </a>
+
+      <!-- NAV: semantički element za navigaciju/izbornik -->
+      <nav class="nav" aria-label="Glavni izbornik">
+        <!-- Svaka stranica mora imati isti izbornik radi povezane navigacije -->
+        <a href="index.html" aria-current="page">Naslovna</a>
+        <a href="psi.html">Psi</a>
+        <a href="pomoc.html">Kako pomoći</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN: semantički element za glavni sadržaj stranice -->
+  <main>
+    <!-- HERO sekcija: “prvi dojam” -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Mjesto gdje svaka šapa dobije novu šansu.</h1>
+          <p class="lead">
+            Azil za pse Šapica nastao je iz želje da se psima bez doma pruži sigurno utočište, briga i prilika za novi početak. Naša
+            misija je jednostavna: svakom psu omogućiti toplinu, sigurnost i obitelj kakvu zaslužuje.
+            
+            Tim predanih volontera svakodnevno skrbi o hranjenju, šetnjama, veterinarskoj njezi i socijalizaciji pasa kako bi bili
+            spremni za odlazak u novi dom. Veliku pažnju posvećujemo upoznavanju budućih udomitelja s karakterom svakog psa jer
+            vjerujemo da se uspješno udomljavanje temelji na povjerenju, razumijevanju i odgovornosti.
+            
+            Uz brigu o životinjama, promičemo odgovorno vlasništvo i važnost edukacije zajednice. Organiziramo razne aktivnosti i
+            događanja kako bismo potaknuli ljude na udomljavanje, volontiranje i podršku našem radu. Svaka pomoć, bilo mala ili
+            velika, ima ogroman utjecaj na živote pasa o kojima brinemo.
+            
+            Naš azil je mjesto nade, oporavka i novih početaka. Svaki pas koji dođe u Šapicu dobiva priliku za bolji život, a svaki
+            udomitelj vjernog prijatelja za cijeli život.
+          </p>
+
+          <!-- Ovo je SIDRO: klik vodi na dio iste stranice (#psi-sekcija) -->
+          <div class="actions">
+            <a class="btn" href="#psi-sekcija">Upoznaj pse </a>
+            <a class="btn btn-ghost" href="kontakt.html">Javi se</a>
+          </div>
+        </div>
+
+        <!-- FIGURE je semantički element za sliku + opis -->
+        <figure class="hero-card">
+          <!-- Ovo je obavezna slika u projektu (minimalno jedna) -->
+          <img src="img/psi/happy-dog.png" alt="Sretni pas u azilu Šapica" />
+          <figcaption>Svaki pas zaslužuje dom.</figcaption>
+        </figure>
+      </div>
+    </section>
+    
+        <!-- ===== SLIDESHOW ===== -->
+
+    <h3 class="gallery-title">Galerija – naši psi</h3>
+
+    <div class="slideshow" id="homeSlideshow">
+      
+      <div class="slide is-active">
+        <img src="img/psi/pas-aron.jpg" alt="Pas Aron">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-argo.jpg" alt="Pas Argo">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-bella.jpg" alt="Pas Bella">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-bruno.jpg" alt="Pas Bruno">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-kiko.jpg" alt="Pas Kiko">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-leo.jpg" alt="Pas Leo">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-luna.jpg" alt="Pas Luna">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-max.jpg" alt="Pas Max">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-milo.jpg" alt="Pas Milo">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-nala.jpg" alt="Pas Nala">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-oskar.jpg" alt="Pas Oskar">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-sky.jpg" alt="Pas Sky">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-thor.jpg" alt="Pas Thor">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-toby.jpg" alt="Pas Toby">
+      </div>
+
+      <div class="slide">
+        <img src="img/psi/pas-zeus.jpg" alt="Pas Zeus">
+      </div>
+      <button type="button" class="slide-btn prev">❮</button>
+      <button type="button" class="slide-btn next">❯</button>
+    </div>
+
+    <!-- Sekcija na koju sidro vodi -->
+    <section class="section" id="psi-sekcija">
+      <div class="container">
+        <header class="section-header">
+          <h2>Psi za udomljavanje - Zadnji pristigli</h2>
+        </header>
+
+        <!-- ARTICLE: semantički element za “jednu karticu/objavu” -->
+        <div class="grid">
+          <article class="card dog-card">
+            <img src="img/psi/pas-aron.jpg" alt="Pas Aron" class="dog-img">
+            <div class="dog-info">
+              <h3 class="dog-name">Aron</h3>
+              <p><strong>Pasmina:</strong> Njemački bokser</p>
+              <p><strong>Starost:</strong> 6 godina</p>
+              <p><strong>Spol:</strong> Muško</p>
+              <p><strong>Kastriran:</strong> Da</p>
+            </div>
+            <p class="dog-desc">
+              Aron je snažan, ali nježan pas koji je vrlo odan svojoj obitelji. 
+              Inteligentan je i voli učiti nove stvari, a dobro mu odgovara aktivan dom.
+            </p>
+          </article>
+
+          <article class="card dog-card">
+            <img src="img/psi/pas-bella.jpg" alt="Pas Bella" class="dog-img">
+            <div class="dog-info">
+              <h3 class="dog-name">Bella</h3>
+              <p><strong>Pasmina:</strong> Yorkshire terijer</p>
+              <p><strong>Starost:</strong> 2 godine</p>
+              <p><strong>Spol:</strong> Žensko</p>
+              <p><strong>Kastriran:</strong> Ne</p>
+            </div>
+            <p class="dog-desc">
+              Bella je mala, ali hrabra kujica puna znatiželje. Voli biti u centru pažnje i brzo se veže za vlasnike.
+            </p>
+          </article>
+
+          <article class="card dog-card">
+            <img src="img/psi/pas-bruno.jpg" alt="Pas Bruno" class="dog-img">
+            <div class="dog-info">
+              <h3 class="dog-name">Bruno</h3>
+              <p><strong>Pasmina:</strong> Francuski buldog</p>
+              <p><strong>Starost:</strong> 6 godina</p>
+              <p><strong>Spol:</strong> Muški</p>
+              <p><strong>Kastriran:</strong> Da</p>
+            </div>
+            <p class="dog-desc">
+              Bruno je razigran i jako privržen pas koji obožava društvo ljudi. 
+              Voli kraće šetnje i puno maženja, a idealan je za život u stanu.
+            </p>
+          </article>
+
+          <article class="card dog-card">
+            <img src="img/psi/pas-max.jpg" alt="Pas Max" class="dog-img">
+            <div class="dog-info">
+              <h3 class="dog-name">Max</h3>
+              <p><strong>Pasmina:</strong> Labrador</p>
+              <p><strong>Starost:</strong> 3 godine</p>
+              <p><strong>Spol:</strong> Muški</p>
+              <p><strong>Kastriran:</strong> Ne</p>
+            </div>
+            <p class="dog-desc">
+              Max je prijateljski raspoložen i pun energije. 
+              Odlično se slaže s djecom i drugim psima, a najviše uživa u igri i boravku na otvorenom.
+            </p>
+          </article>
+              <article class="card dog-card">
+            <img src="img/psi/pas-leo.jpg" alt="Pas Leo" class="dog-img">
+            <div class="dog-info">
+              <h3 class="dog-name">Leo</h3>
+              <p><strong>Pasmina:</strong> Zlatni retriver</p>
+              <p><strong>Starost:</strong> 3 godine</p>
+              <p><strong>Spol:</strong> Muško</p>
+              <p><strong>Kastriran:</strong> Da</p>
+            </div>
+            <p class="dog-desc">
+              Leo je nježan i strpljiv pas koji obožava društvo ljudi. Odlično se slaže s djecom
+              i voli duge šetnje.
+            </p>
+          </article>
+          <article class="card dog-card">
+            <img src="img/psi/pas-sky.jpg" alt="Pas Sky" class="dog-img">
+            <div class="dog-info">
+              <h3 class="dog-name">Sky</h3>
+              <p><strong>Pasmina:</strong> Border collie</p>
+              <p><strong>Starost:</strong> 2 godine</p>
+              <p><strong>Spol:</strong> Muško</p>
+              <p><strong>Kastriran:</strong> Ne</p>
+            </div>
+            <p class="dog-desc">
+              Sky je izuzetno inteligentan i energičan pas koji voli učiti nove trikove
+              i treba puno aktivnosti.
+            </p>
+          </article>
+        </div>
+
+        <p class="note">
+          Želiš vidjeti sve pse? Idi na <a href="psi.html" class="inline-link">stranicu Psi</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: semantički element za donji dio stranice -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Azil Šapica</p>
+
+      <div class="social">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">Instagram
+          <img src="img/social/instagram.svg" alt="" class="social-icon">
+        </a> 
+        <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook
+          <img src="img/social/facebook.svg" alt="" class="social-icon">
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YoutTube">YouTube
+          <img src="img/social/youtube.svg" alt="" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+

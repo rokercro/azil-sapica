@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azil Šapica | Kontakt</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="js/config.js" defer></script>
+
+  <!-- main.js zajednički -->
+  <script src="js/main.js" defer></script>
+
+  <!-- kontakt.js je poseban JS samo za ovu stranicu (forma + localStorage) -->
+  <script src="js/kontakt.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">🐾 Azil Šapica</a>
+
+      <nav class="nav" aria-label="Glavni izbornik">
+        <a href="index.html">Naslovna</a>
+        <a href="psi.html">Psi</a>
+        <a href="pomoc.html">Kako pomoći</a>
+        <a href="kontakt.html" aria-current="page">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h1>Kontakt</h1>
+          <p class="muted">Pošalji upit za udomljavanje, volontiranje ili donaciju.</p>
+        </header>
+
+        <!-- Ovdje će JS prikazati zadnji spremljeni upit iz localStorage -->
+        <div id="lastRequest" class="panel" aria-live="polite">
+          <h2>Upiti</h2>
+          <p class="muted">Prikaz zadnjeg upita.</p>
+        </div>
+
+        <section class="panel mt">
+          <h2>Javite nam se</h2>
+
+          <!-- id="contactForm" koristimo u JS-u da “uhvatimo” formu -->
+          <form id="contactForm" novalidate>
+            <!-- novalidate = ne koristimo browserovu validaciju nego svoju u JS -->
+
+            <label>
+              Ime i prezime
+              <input type="text" id="fullName" placeholder="Ime i prezime" />
+            </label>
+
+            <label>
+              Email
+              <input type="email" id="email" placeholder="ime.prezime@email.com" />
+            </label>
+
+            <label>
+              Vrsta upita
+              <select id="type">
+                <option value="">-- odaberi --</option>
+                <option value="udomljavanje">Udomljavanje</option>
+                <option value="volontiranje">Volontiranje</option>
+                <option value="donacija">Donacija</option>
+                <option value="ostalo">Ostalo</option>
+              </select>
+            </label>
+
+            <label>
+              Poruka
+              <textarea id="message" placeholder="Napiši kratko što te zanima..."></textarea>
+            </label>
+
+            <!-- Ovdje prikazujemo poruke validacije (uspjeh/greška) -->
+            <div id="formMsg" class="msg" hidden></div>
+
+            <button class="btn" type="submit">Pošalji upit</button>
+
+            <small class="muted">
+              Tel: 031/123-456, Mail: azil-sapica@email.com, Adresa: Neka adresa 00, 123456, Grad, OIB:123456789, IBAN: HR1122334455667788
+            </small>
+          </form>
+        </section>
+      </div>
+    </section>
+    <button id="clearStorageBtn" type="button">Obriši spremljene podatke</button>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Azil Šapica</p>
+      <div class="social">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">Instagram
+          <img src="img/social/instagram.svg" alt="" class="social-icon">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook
+          <img src="img/social/facebook.svg" alt="" class="social-icon">
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YoutTube">YouTube
+          <img src="img/social/youtube.svg" alt="" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
